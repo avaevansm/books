@@ -1,2 +1,12 @@
 <h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+
+<form action="/books" method="post">
+<input type"text" name="book[name]" value"">
+<input type="submit" name="submit" value="Save">
+</form>
+
+<% @books.each do |book| %>
+  <p>
+    <a href="/books/<%= book.id %>"><%= book.name %></a>
+  </p>
+  <% end %>

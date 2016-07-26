@@ -8,6 +8,7 @@ class BookTest < ActiveSupport::TestCase
   test "can be persisted" do
     kafka_on_the_shore = Book.create!(name: "Kafka on the Shore")
     assert kafka_on_the_shore.persisted?
-
   end
+
+  
 end
