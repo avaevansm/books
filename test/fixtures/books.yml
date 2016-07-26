@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Tropic of Cancer
+  genere: autobiographical novel
+  isbn: 0802131786
+  checked_out: false
+  due_date: 2016-07-26
+
+two:
+  name: Kafka on the Shore
+  genere: 1400079276
+  isbn: MyString
+  checked_out: false
+  due_date: 2016-07-26
