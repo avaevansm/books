@@ -7,7 +7,7 @@ class BooksControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    response = get(:show, id: 1)
+    response = get(:show, id: Book.last.id)
     assert_response :success
   end
 

@@ -1,0 +1,14 @@
+<h1><%= @book.name%></h1>
+
+<%= form_for @book, url: update_book_path(@book.id) do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
+
+<%= form_for @book, url: delete_book_path(book_id: @book.id) do |f| %>
+<%=f.submit "delete" %>
+<% end %>
+
+<%= link_to "Back to homepage", books_path %>
+
+<%= link_to "Back to #{@book.name}", book_path(id: @book.id) %>

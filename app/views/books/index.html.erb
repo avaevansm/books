@@ -1,12 +1,18 @@
+<h1>Welcome</h1>
 <h1>Books#index</h1>
 
-<form action="/books" method="post">
-<input type"text" name="book[name]" value"">
-<input type="submit" name="submit" value="Save">
-</form>
+<table>
+  <tbody>
+    <% @books.each do |book| %>
+    <tr>
+      <td><%= link_to "#{book.name}",book_path(id: book.id)%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<% @books.each do |book| %>
-  <p>
-    <a href="/books/<%= book.id %>"><%= book.name %></a>
-  </p>
-  <% end %>
+
+<%= form_tag("/books", class: "") do %>
+  <%= text_field_tag "book[name]" %>
+  <%= submit_tag %>
+<% end %>

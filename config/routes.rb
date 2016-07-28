@@ -1,9 +1,11 @@
- Rails.application.routes.draw do
-  get 'books/' => "books#index"
+Rails.application.routes.draw do
+  get '/' => "books#index"
+  # get '/books' => "books#index"
   post '/books' => "books#create"
-  get 'books/:id' => "books#show"
-  patch 'books/:id' => "books#edit"
-  delete 'books/:id'=> "books#delete"
+  get 'books/:id' => "books#show", as: :book
+  get 'books/:id/edit' => "books#edit", as: :edit_book
+  patch 'books/:id' => "books#update", as: :update_book
+  delete 'books/:id'=> "books#delete", as: :delete_book
 
 
   # get 'books/index'
